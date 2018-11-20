@@ -125,8 +125,8 @@ public class YLYDynItemPage : UIBehaviour
         }
         else
         {
-            //float width = padding.left + padding.right + column * cellSize.x;
-            rectTransform.SetSizeWithCurrentAnchors((RectTransform.Axis)0, 0f);
+            float width = padding.left + padding.right + column * cellSize.x;
+            rectTransform.SetSizeWithCurrentAnchors((RectTransform.Axis)0, width);
         }
 
         contentBounds = UGUIExtend.CalculateRelativeRectTransformBounds(RelativeParentTrans, rectTransform);
